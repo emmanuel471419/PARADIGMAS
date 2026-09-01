@@ -1,4 +1,4 @@
-package Semana2;
+package Semana2.FIGURA;
 
 public class Ejemplopoli1 {
     public static void main(String[] args) {

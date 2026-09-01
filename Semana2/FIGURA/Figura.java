@@ -1,4 +1,4 @@
-package Semana2;
+package Semana2.FIGURA;
 
 class Figura {
     public void dibujar() {
