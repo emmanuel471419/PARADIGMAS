@@ -1,0 +1,32 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Figura {
+    {abstract} ~double calcularArea()
+    ~void mostrarNombre()
+}
+
+class Circulo {
+    -double radio
+    +Circulo(double radio)
+    ~double calcularArea()
+}
+
+class Rectangulo {
+    -double longitud
+    -double anchura
+    +Rectangulo(double longitud, double anchura)
+    ~double calcularArea()
+}
+
+class Main {
+    +{static} void main(String[] args)
+}
+
+Figura <|-- Circulo
+Figura <|-- Rectangulo
+Main ..> Figura : usa
+Main ..> Circulo : crea
+Main ..> Rectangulo : crea
+
+@enduml

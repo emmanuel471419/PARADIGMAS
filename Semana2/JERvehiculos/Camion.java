@@ -1,5 +1,4 @@
 package Semana2.JERvehiculos;
-
 class Camion extends Vehiculo {
     private double cargaMaxima;
 

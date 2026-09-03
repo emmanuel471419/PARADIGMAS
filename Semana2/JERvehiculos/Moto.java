@@ -1,5 +1,4 @@
 package Semana2.JERvehiculos;
-
 class Moto extends Vehiculo {
     private boolean tieneSidecar;
 
