@@ -1,0 +1,25 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Ejemplo1 {
+    + {static} main(args: String[]): void
+}
+
+class CuentaBancaria {
+    + calcularInteres(saldo: double, meses: int): double
+    + procesarArchivo(archivo: String): void
+    + retirar(monto: double, a: int): void
+    + retirar(monto: double): void
+}
+
+class SaldoInsuficienteException {
+    - saldoRequerido: double
+    - saldoDisponible: double
+    + SaldoInsuficienteException(requerido: double, disponible: double)
+    + getSaldoRequerido(): double
+    + getSaldoDisponible(): double
+}
+
+Ejemplo1 --> CuentaBancaria : usa
+CuentaBancaria ..> SaldoInsuficienteException : lanza
+@enduml
