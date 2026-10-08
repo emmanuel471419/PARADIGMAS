@@ -1,0 +1,23 @@
+@startuml
+skinparam shadowing false
+skinparam RoundCorner 10
+skinparam DefaultFontName "Arial"
+skinparam DefaultFontSize 12
+
+actor "User" as user
+
+rectangle "MVC Architecture" {
+    rectangle "View" as view #E0F7FA
+    rectangle "Controller" as controller #E8F5E9
+    rectangle "Model" as model #FFFDE7
+}
+
+' Flujo ordenado y limpio de izquierda a derecha
+user --> view : 1. Interacts / Input Data
+view --> controller : 2. Sends Request
+controller --> model : 3. Queries / Updates Data
+model --> controller : 4. Returns Data
+controller --> view : 5. Passes Data
+view --> user : 6. Renders UI / Result
+
+@enduml
